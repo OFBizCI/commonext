@@ -17,9 +17,8 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
-<entity-engine-xml>
-    <SecurityPermission description="ALL OFBiz Setup operations." permissionId="SETUP_ADMIN"/>
-    <SecurityPermission description="OFBiz Setup View permission." permissionId="SETUP_VIEW"/>
 
-    <SecurityGroupPermission groupId="FULLADMIN" permissionId="SETUP_ADMIN"/>
+<entity-engine-xml>
+    <!-- Common Ext security -->
+    <SecurityGroupPermission groupId="FULLADMIN" permissionId="COMMONEXT_PUBLMSG"/>
 </entity-engine-xml>
