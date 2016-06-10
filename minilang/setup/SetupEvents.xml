@@ -336,7 +336,7 @@
         <set field="parameters.roleTypeId" value="CUSTOMER"/>
         <set field="organizationPartyId" from-field="parameters.partyId"/>
         <set field="personContext.partyId" from-field="parameters.customerPartyId"/>
-        <call-simple-method method-name="createUser" xml-resource="component://party/script/org/ofbiz/party/user/UserEvents.xml"/>
+        <call-simple-method method-name="createUser" xml-resource="component://party/minilang/user/UserEvents.xml"/>
     </simple-method>
 
     <simple-method method-name="createFacilityAndContactMech" short-description="create Facility and ContactMech">
@@ -528,7 +528,7 @@
             <set field="checkAction" value="CREATE"/>
             <else><set field="checkAction" value="UPDATE"/></else>
         </if-empty>
-        <call-simple-method method-name="checkCategoryRelatedPermission" xml-resource="component://product/script/org/ofbiz/product/category/CategoryServices.xml"/>
+        <call-simple-method method-name="checkCategoryRelatedPermission" xml-resource="component://product/minilang/product/category/CategoryServices.xml"/>
         <check-errors/>
         
         <if-empty field="parameters.currencyUomId">
